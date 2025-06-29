@@ -1,6 +1,7 @@
 import java.util.*;
 public class ascending_descending_check{
     public static void main(String[] args){
+
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of elements to be checked: ");
         int size = sc.nextInt();
@@ -10,8 +11,10 @@ public class ascending_descending_check{
         for(int i =0 ; i<size; i++){
             numbers[i] = sc.nextInt();
         }
+
         boolean isDescending = true;
         boolean isAscending = true;
+
         for(int i = 0 ; i<numbers.length-1; i++){
             if(numbers[i]<numbers[i+1]){
                 isDescending = false;
@@ -20,6 +23,8 @@ public class ascending_descending_check{
                 isAscending = false;
             }
         }
+        
+        System.out.print("\n");
         if(isAscending){
             System.out.println("Elements are sorted in ascending order...");
         }
